@@ -139,7 +139,7 @@ function procCmd(c)
                 	break; 
                 }
                 } 
-                case 'diamondarmour':
+                else if(cmd[0]=="diamondarmour")
                 {
                 	if(coins>=700)
                     {
@@ -156,7 +156,7 @@ function procCmd(c)
                 	break; 
                 }
                 } 
-                case 'woodentools': //Tools Section
+              else if(cmd[0]=="woodentools") //Tools Section
                 { 
                 	if(coins>=100)
                     {
@@ -174,7 +174,7 @@ function procCmd(c)
                 	break; 
                 }
                 } 
-                case 'stonetools':
+                else if(cmd[0]=="stonetools")
                 { 
                 	if(coins>=200)
                     {
@@ -192,7 +192,7 @@ function procCmd(c)
                 	break; 
                 }
                 } 
-                case 'irontools': 
+                else if(cmd[0]=="irontools")
                 { 
                 	if(coins>=400)
                     {
@@ -210,7 +210,7 @@ function procCmd(c)
                 	break; 
                 }
                 } 
-                case 'goldtools':
+                else if(cmd[0]=="goldtools")
                 { 
                 	if(coins>=300)
                     {
@@ -228,7 +228,7 @@ function procCmd(c)
                 	break; 
                 }
                 } 
-                case 'diamondtools':
+                else if(cmd[0]=="diamondtools")
                 { 
                 	if(coins>=700)
                     {
@@ -246,7 +246,7 @@ function procCmd(c)
                 	break; 
                 }
                 } 
-                case 'woodenblocks': //Blocks Section
+                else if(cmd[0]=="woodenblocks") //Blocks Section
                 { 
                 	if(coins>=200) 
                     {
@@ -263,7 +263,7 @@ function procCmd(c)
                 	break; 
                 }
                 } 
-                case 'expensiveblocks':
+                else if(cmd[0]=="expensiveblocks")
                 {
                 	if(coins>=1000)
                     {
@@ -279,7 +279,7 @@ function procCmd(c)
                 	break; 
                 }
                 } 
-                case 'oreblocks':
+                else if(cmd[0]=="oreblocks")
                 { 
                 	if(coins>=700)
                     {
@@ -297,7 +297,7 @@ function procCmd(c)
                 	break; 
                 }
                 } 
-                case 'sellhand': //Sells The Item/Block You Are Holding, Currently Only Sells Diamond, Gold Ingot, Iron Ingot, Coal, Bed, Cake, Furnace, Bucket, TNT, Obsidian, Torch, Wheat
+                else if(cmd[0]=="sellhand") //Sells The Item/Block You Are Holding, Currently Only Sells Diamond, Gold Ingot, Iron Ingot, Coal, Bed, Cake, Furnace, Bucket, TNT, Obsidian, Torch, Wheat
                 { 
                 	if(CurrentItem == 264);
                     {
@@ -372,7 +372,7 @@ function procCmd(c)
                     }
                 	break; 
                 } 
-                case 'easteregg':
+                else if(cmd[0]=="easteregg")
                 { 
                 	coins+=10000;
                 	print("You Have Found The Easter Egg!");
@@ -390,7 +390,7 @@ function procCmd(c)
                     addItemInventory(264,1);
                 	break; 
                 }
-                case 'save':
+                else if(cmd[0]=="save")
                 {
                     ModPE.saveData (Level.getWorldDir() + "coins", cash);
                     cash = ModPE.readData (Level.getWorldDir() + "coins");
